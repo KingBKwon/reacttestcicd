@@ -1,0 +1,57 @@
+/* ... 기존의 CSS 코드 ... */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  background-color: #d1d1d1;
+  border: 0;
+  font-size: 16px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+img {
+  width: 100%; /* 이미지 너비를 컨테이너의 너비에 맞춥니다 */
+  height: auto; /* 이미지 높이를 자동으로 조정합니다 */
+  object-fit: cover; /* 이미지가 컨테이너를 채우도록 조정하면서 비율을 유지합니다 */
+}
+
+.btn {
+  display:flex;
+  background-color: rgb(200, 46, 92);
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 300px;
+  
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}

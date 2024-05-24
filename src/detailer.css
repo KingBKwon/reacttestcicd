@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 80vw;
+  min-width: 1000px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* Header */
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  line-height: 60px;
+  background-color: rgb(200, 46, 92);
+}
+
+.wrapper-title h1 {
+  font-family: 'Merienda', cursive;
+  font-weight: 700;
+  font-size: 1.7em;
+  color: #fff;
+  text-shadow: 0 -1px 0 #222;
+  padding: 20px;
+  margin-left: -100px;
+}
+
+.wrapper-info-1 li a,
+.wrapper-info-2 li a {
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.search {
+  display:flex;
+  right:-20%;
+  margin-top: 2px;
+
+
+}
+
+.wrapper-info-2 {
+  display: flex;
+  align-items: center;
+  margin-right: -100px;
+}
+
+.wrapper li a:hover {
+  color: rgba(93,w 56, 189, 0.871);
+}
+
+.wrapper ul, .wrapper li, .wrapper-title, 
+.wrapper-title h1, .wrapper-info-1, .wrapper-info-2
+{
+  display: inline;
+  
+}
+
+/* Main CSS */
+.wrapper-back {
+  background-color: bisque;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+
+.wrapper-box {
+  padding: 50px;
+  margin-left: 0%;
+}
+
+.box {
+  width: 300px;
+  height: 500px;
+  background-color: #ab3b3b;
+  margin-right: 10px;
+  font-size: 18px;
+  float: left;
+}
+
+.wrapper-info-3 {
+  position: absolute;
+  left: 400px;
+}
+
+.title-info div {
+  padding: 20px;
+}
+
+.summary-box {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  width: 600px;
+  border-radius: 5px;
+  background-color: #a63636;
+}
+
+.summary-box h2 {
+  margin-bottom: 10px;
+}
+
+.summary-box p {
+  margin: 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Like Button */
+.like {
+  position: absolute;
+  top: -5%;
+  right: -100%;
+  border-radius: 10px;
+  width: 120px;
+  height: 120px;
+}
+
+/* Trailer Box */
+.trailer {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  background-color: #d58c8c;
+  right:-140%;
+  top: 40%;
+  font-size: 18px;
+}
+
+
+
+/* Cast Section */
+.card {
+  width: 138px;
+  height: 260px;
+  margin-right: 10px;
+  margin-left: 61px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px lightslategray;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.card p {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 0;
+  padding: 5px 0;
+}
+
+.cast-list {
+  display: flex;  
+  padding: 0;
+  margin: 30px;
+  list-style-type: none;
+}
+
+.cast-list .card {
+  margin-right: 20px;
+}
+
+/* Related Movies Section */
+
+
+.content-section {
+  margin-bottom:30px;
+  width: 100%;
+  display: flex;
+  height: 300px;
+  justify-content: space-between;
+  margin:20px
+}
+
+.positive-reviews, .negative-reviews {
+  width: 24%; /* 양쪽 리뷰 박스의 너비를 조정 */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #b36c6c;
+}
+
+/* 추가된 부분 */
+.negative-reviews {
+  margin-left: 20px; /* 부정 리뷰 박스의 왼쪽 여백 */
+}
+.related-movies {
+  width:48%;
+  display: flex;
+  overflow-x: auto;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.related-movie {
+  margin-right: 20px;
+}
+
+.moviecard{
+  width: 190px;
+  height: 260px;
+  margin-right: 10px;
+  margin-left: 61px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px lightslategray;
+}
+
+.moviecard img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.moviecard p {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 0;
+  padding: 5px 0;
+}
+

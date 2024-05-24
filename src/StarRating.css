@@ -1,0 +1,6 @@
+/* StarRating.css */
+.star-rating span {
+  color: gold;
+  margin-right: 4px;
+  font-size: 1.5em;
+}

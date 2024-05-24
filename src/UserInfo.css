@@ -1,0 +1,33 @@
+.userinfo-container {
+  padding: 20px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.user-card {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.clearfix {
+  clear: both;
+}

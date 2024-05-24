@@ -1,0 +1,35 @@
+name: CI/CD bkbk_client to AWS S3
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    #코드 체크 아웃 까지는 무조건 동일하게 작성
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v3
+      #이 부분은 ECR 인아 ECS, EKS 사용할 떄는 수정
+      #{{}} 가 되어 있는 부분은 github에서 환경 설정에 있는 값을 찾아오는 문장
+      - name: AWS IAM 사용자 설정
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      #이 명령으로 빌드가 됨. 
+      - name: 리액트 빌드
+        run: |
+          npm install
+          npm run build
+      
+      #빌드한 파일을 S3에 업로드
+      - name: 빌드한 파일 S3에 업로드
+        run: aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
